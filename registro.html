@@ -1,11 +1,101 @@
-<DOCTYPE !html>
-<html lang="es">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro - ZONALIBROS</title>
-    <link rel="stylesheet" href="styles.css">
+     <link rel="stylesheet" href="stylesheet.css">
+     <script type="script" src="script.js"></script>
+    <title>Document</title>
 </head>
 <body>
-    
+    <header class="header-nav">
+      <div class="nav-left">
+        <a href="#" class="nav-link">HOME</a>
+      </div>
+      <div class="nav-center">
+        <h1 class="logo">ZONALIBROS</h1>
+      </div>
+      <div class="nav-right">
+        <a href="#" class="btn-login">INICIAR SESIÓN</a>
+      </div>
+    </header>
+
+
+  <div>
+    <h2> Registro Usuario:</h2>
+
+  <label for="nombre">Nombre</label><br>
+  <input type="text" id="nombre" name="nombre" required autocomplete="off"><br><br>
+
+  <label for="email">Correo Electrónico</label><br>
+  <input type="email" id="email" name="email" required autocomplete="off"><br><br>
+
+  <label for="RepetirCorreo">Repetir Correo Electronico</label><br>
+  <input type="email" id="emailRepetir" name="emailRepetir" required autocomplete="off"><br><br>
+
+  <label for="Contraseña">Contraseña</label><br>
+  <input type="password" id="contraseña" name="contraseña" required autocomplete="off"><br><br>
+
+  <label for="ConfirmarContraseña">Confirmar Contraseña</label><br>
+  <input type="password" id="contraseñaRepetir" name="contraseñaRepetir " required autocomplete="off"><br><br>
+
+  <label for="Telefono">Telefono Opcional</label><br>
+  <input type="text" id="telefono" name="telefono" autocomplete="off"><br><br>
+
+  <fieldset class="genero">
+  <legend>Tipo de genero:</legend>
+
+  <div class="primeraColumna">
+  <div>
+    <input type="checkbox" id="ficcion" name="ficcion"/>
+    <label for="ficcion">Ficcion</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="misterio" name="misterio" />
+    <label for="misterio">Misterio</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="fantasia" name="fantasia" />
+    <label for="fantasia">Fantasia</label>
+  </div>
+
+
+  <div>
+    <input type="checkbox" id="cienciaFiccion" name="cienciaFiccion" />
+    <label for="cienciaFiccion">Ciencia Ficcion</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="romance" name="romance" />
+    <label for="romance">Romance</label>
+  </div>
+  </div>
+
+  <div class="bloqueDosColumnas">
+    <div>
+      <input type="checkbox" id="terror" name="terror" />
+      <label for="terror">Terror</label>
+    </div>
+    <div>
+      <input type="checkbox" id="historico" name="historico" />
+      <label for="historico">Historico</label>
+    </div>
+    <div>
+      <input type="checkbox" id="aventura" name="aventura" />
+      <label for="aventura">Aventura</label>
+    </div>
+    <div>
+      <input type="checkbox" id="biografia" name="biografia" />
+      <label for="biografia">Biografia</label>
+    </div>
+  </div>
+</fieldset>
+
+  <button type="submit">Enviar</button>
+
+  </div>
+</form>
 </body>
+</html>

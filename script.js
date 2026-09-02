@@ -1,0 +1,1 @@
+console.log("Hola soy javascript y me quiero matar")
