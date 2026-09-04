@@ -68,7 +68,6 @@ function ValidacionesRegistro() {
         errores.push("selecciona al menos un género favorito");
     }
 
-    // MOSTRAR RESULTADOS Y GUARDAR 
     if (errores.length > 0) {
         let mensajeHTML = "<ul style='color: red;'>";
         for (let i = 0; i < errores.length; i++) {
@@ -77,19 +76,27 @@ function ValidacionesRegistro() {
         mensajeHTML += "</ul>";
         mensajeError.innerHTML = mensajeHTML;
     } else {
-        // AQUÍ GUARDAMOS AL USUARIO EN EL NAVEGADOR
+        let generosSeleccionados = [];
+        generos.forEach(function(checkbox) {
+            generosSeleccionados.push(checkbox.value);
+        });
+
         const nuevoUsuario = {
+            nombre: nombre,
             correo: correo,
             contraseña: contraseña,
-            nombre: nombre,
-            genero: generos
+            telefono: telefono,
+            generos: generosSeleccionados
         };
 
-        // Convertimos el objeto a texto con JSON.stringify para poder guardarlo
         localStorage.setItem("usuarioRegistrado", JSON.stringify(nuevoUsuario));
 
-        mensajeError.innerHTML = "<p style='color: green;'><strong>¡Registro exitoso! Ya puedes iniciar sesión.</strong></p>";
-        formRegistro.reset(); 
+        mensajeError.innerHTML = "<p style='color: green;'><strong>¡Registro exitoso! Redirigiendo al Login...</strong></p>";
+        formRegistro.reset();
+
+        setTimeout(function() {
+            window.location.href = "login.html";
+        }, 1500);
     }
 }
 
