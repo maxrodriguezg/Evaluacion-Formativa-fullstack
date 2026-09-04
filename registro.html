@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="stylesheet.css">
-     <script type="script" src="script.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="scriptRegistro.js" defer></script>
+    <title>Registro - Zonalibros</title>
 </head>
 <body>
     <header class="header-nav">
@@ -16,86 +16,53 @@
         <h1 class="logo">ZONALIBROS</h1>
       </div>
       <div class="nav-right">
-        <a href="#" class="btn-login">INICIAR SESIÓN</a>
+        <a href="login.html" class="btn-login">INICIAR SESIÓN</a>
       </div>
     </header>
 
+  <div class="container">
+    <h2>Registro Usuario:</h2>
 
-  <div>
-    <h2> Registro Usuario:</h2>
+    <div class = "error "id="mensajeError" ></div>
 
-  <label for="nombre">Nombre</label><br>
-  <input type="text" id="nombre" name="nombre" required autocomplete="off"><br><br>
+    <form id="formRegistro">
+      <label for="nombre">Nombre Completo</label><br>
+      <input type="text" id="nombre" name="nombre" autocomplete="off"><br><br>
 
-  <label for="email">Correo Electrónico</label><br>
-  <input type="email" id="email" name="email" required autocomplete="off"><br><br>
+      <label for="email">Correo Electrónico</label><br>
+      <input type="email" id="email" name="email" autocomplete="off"><br><br>
 
-  <label for="RepetirCorreo">Repetir Correo Electronico</label><br>
-  <input type="email" id="emailRepetir" name="emailRepetir" required autocomplete="off"><br><br>
+      <label for="emailRepetir">Repetir Correo Electrónico</label><br>
+      <input type="email" id="emailRepetir" name="emailRepetir" autocomplete="off"><br><br>
 
-  <label for="Contraseña">Contraseña</label><br>
-  <input type="password" id="contraseña" name="contraseña" required autocomplete="off"><br><br>
+      <label for="contraseña">Contraseña</label><br>
+      <input type="password" id="contraseña" name="contraseña" autocomplete="off"><br><br>
 
-  <label for="ConfirmarContraseña">Confirmar Contraseña</label><br>
-  <input type="password" id="contraseñaRepetir" name="contraseñaRepetir " required autocomplete="off"><br><br>
+      <label for="contraseñaRepetir">Confirmar Contraseña</label><br>
+      <input type="password" id="contraseñaRepetir" name="contraseñaRepetir" autocomplete="off"><br><br>
 
-  <label for="Telefono">Telefono Opcional</label><br>
-  <input type="text" id="telefono" name="telefono" autocomplete="off"><br><br>
+      <label for="telefono">Teléfono (Opcional)</label><br>
+      <input type="text" id="telefono" name="telefono" autocomplete="off"><br><br>
 
-  <fieldset class="genero">
-  <legend>Tipo de genero:</legend>
+      <fieldset class="genero">
+        <legend>Tipo de género preferido (Seleccione al menos uno):</legend>
+        <div class="primeraColumna">
+          <div><input type="checkbox" id="ficcion" name="genero" value="Ficcion"><label for="ficcion">Ficción</label></div>
+          <div><input type="checkbox" id="misterio" name="genero" value="Misterio"><label for="misterio">Misterio</label></div>
+          <div><input type="checkbox" id="fantasia" name="genero" value="Fantasia"><label for="fantasia">Fantasía</label></div>
+          <div><input type="checkbox" id="cienciaFiccion" name="genero" value="CienciaFiccion"><label for="cienciaFiccion">Ciencia Ficción</label></div>
+          <div><input type="checkbox" id="romance" name="genero" value="Romance"><label for="romance">Romance</label></div>
+        </div>
+        <div class="bloqueDosColumnas">
+          <div><input type="checkbox" id="terror" name="genero" value="Terror"><label for="terror">Terror</label></div>
+          <div><input type="checkbox" id="historico" name="genero" value="Historico"><label for="historico">Histórico</label></div>
+          <div><input type="checkbox" id="aventura" name="genero" value="Aventura"><label for="aventura">Aventura</label></div>
+          <div><input type="checkbox" id="biografia" name="genero" value="Biografia"><label for="biografia">Biografía</label></div>
+        </div>
+      </fieldset><br>
 
-  <div class="primeraColumna">
-  <div>
-    <input type="checkbox" id="ficcion" name="ficcion"/>
-    <label for="ficcion">Ficcion</label>
+      <button type="submit">Enviar</button>
+    </form>
   </div>
-
-  <div>
-    <input type="checkbox" id="misterio" name="misterio" />
-    <label for="misterio">Misterio</label>
-  </div>
-
-  <div>
-    <input type="checkbox" id="fantasia" name="fantasia" />
-    <label for="fantasia">Fantasia</label>
-  </div>
-
-
-  <div>
-    <input type="checkbox" id="cienciaFiccion" name="cienciaFiccion" />
-    <label for="cienciaFiccion">Ciencia Ficcion</label>
-  </div>
-
-  <div>
-    <input type="checkbox" id="romance" name="romance" />
-    <label for="romance">Romance</label>
-  </div>
-  </div>
-
-  <div class="bloqueDosColumnas">
-    <div>
-      <input type="checkbox" id="terror" name="terror" />
-      <label for="terror">Terror</label>
-    </div>
-    <div>
-      <input type="checkbox" id="historico" name="historico" />
-      <label for="historico">Historico</label>
-    </div>
-    <div>
-      <input type="checkbox" id="aventura" name="aventura" />
-      <label for="aventura">Aventura</label>
-    </div>
-    <div>
-      <input type="checkbox" id="biografia" name="biografia" />
-      <label for="biografia">Biografia</label>
-    </div>
-  </div>
-</fieldset>
-
-  <button type="submit">Enviar</button>
-
-  </div>
-</form>
 </body>
 </html>

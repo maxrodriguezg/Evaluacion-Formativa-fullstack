@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="scriptLogin.js" defer></script>
+    <title>Ingresar Usuario - Zonalibros</title>
+</head>
+<body>
+    <header class="header-nav">
+      <div class="nav-left"><a href="#" class="nav-link">HOME</a></div>
+      <div class="nav-center"><h1 class="logo">ZONALIBROS</h1></div>
+      <div class="nav-right"><a href="registro.html" class="btn-login">REGISTRARSE</a></div>
+    </header>
+
+    <div class="container">
+      <h1>ZONA LIBROS</h1>
+      <div id="mensajeLogin" style="color: red; margin-bottom: 15px;"></div>
+
+      <form id="formLogin">
+        <label for="email">Correo Electrónico:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="contraseña">Contraseña:</label><br>
+        <input type="password" id="contraseña" name="contraseña"><br><br>
+
+        <button type="submit">Ingresar</button>
+      </form>
+    </div>
+</body>
+</html>
